@@ -4,6 +4,11 @@ function compute()
     interest = parseFloat(document.getElementById("rate").value);
     years = document.getElementById("years").value;
     final_year = parseInt(years) + 2020;
+    if (principal == null || principal == "" || principal<=0) {
+        alert('enter positive principal');
+        document.getElementById("principal").focus();
+    
+    }
 
     document.getElementById("deposit-calc-value").innerHTML = principal;
     document.getElementById("interest-calc-value").innerHTML = parseFloat(interest * 100).toFixed(1)+"%";
