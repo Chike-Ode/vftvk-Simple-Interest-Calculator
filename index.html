@@ -4,13 +4,49 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
+    <div class="calculator">
         <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <div class="form-values">
+            <div class="amount-container">
+                <div class="amount-text"> Amount </div> 
+                <input type="number"  id="principal"> 
+            </div> <br/>
+            <div class="slider-container">
+                <div class="slider-text"> Interest Rate </div> 
+                <input width="400" type="range" min="0" max="1" value="1" step="0.005" id="rate" onchange="show_value(this.value);"> 
+                <div id="slider_value">100%</div>
+            </div><br/>
+            <div class="years-container">
+                <div class="years-text">No. of Years</div> 
+                <input type="number" value="1" min="1" id="years">
+            </div><br/>
+            <div class="interest-container">
+                <div class="interest-text"> Interest : </div> 
+                <span id="result"></span> 
+            </div><br>
+            <button class="compute-btn" onclick="compute()">Compute Interest</button>
+            
+            <div class="deposit-calc-container">
+                <div class="deposit-calc-text">If you deposit</div>
+                <div id="deposit-calc-value"></div>
+            </div>
+            <div class="interest-calc-container">
+                <div class="interest-calc-text">at an interest rate of </div>
+                <div id="interest-calc-value"></div>
+            </div>
+            <div class="amount-calc-container">
+                <div class="amount-calc-text">You will receive an amount of </div>
+                <div id="amount-calc-value"></div>
+            </div>
+            <div class="year-calc-container">
+                <div class="year-calc-text">in the year</div>
+                <div id="year-calc-value"></div>
+            </div>
+        </div><br>
+        <div class="footer-container">
+            <div class="footer">&copy Everyone can get rich</div>
+        </div>
+    </div>
+    
     </body>
 </html>

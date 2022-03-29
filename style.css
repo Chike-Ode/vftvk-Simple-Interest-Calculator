@@ -1,4 +1,69 @@
-body {background-color:tan;}
-h1{color:green;}
+body {background-color:black;
+    padding: 1px 40px;}
 
+h1{color:gray;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    }
 
+.calculator{
+    background-color: white;
+    text-align: center;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.slider-container, .amount-container, .years-container, .interest-container{
+    display:flex;
+    
+}
+
+.form-values{
+    /* display: flex; */
+    display: inline-block;
+    align-items: center;
+  justify-content: center;
+}
+
+.slider-text, .amount-text, .years-text, .interest-text{
+    width: 90;
+    text-align: left;
+}
+
+.deposit-calc-text, .interest-calc-text, .amount-calc-text, .year-calc-text{
+    text-align: left;
+    width: 250;
+}
+
+.footer{
+    /* width: 200; */
+    /* text-align: center; */
+}
+.footer-container{
+    /* display: flex; */
+    /* position: absolute;
+  left: 2; */
+  padding-right: 30%;
+}
+
+#deposit-calc-value, #interest-calc-value, #amount-calc-value, #year-calc-value{
+    background-color: yellow;
+    /* width: 30; */
+}
+
+.deposit-calc-container, .interest-calc-container, .amount-calc-container, .year-calc-container{
+    display: flex;
+}
+
+.compute-btn{
+    display: flex;
+    text-align: left;
+}
+
+#years{
+width: 50px;
+}
+
+#principal{
+    width: 100px;
+}
